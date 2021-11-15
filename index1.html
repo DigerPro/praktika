@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Слайдер</title>
+  <base href="https://itchief.ru">
+  <!-- Подключаем CSS слайдера -->
+  <link rel="stylesheet" href="/examples/libs/simple-adaptive-slider/simple-adaptive-slider.min.css">
+  <!-- Подключаем JS слайдера -->
+  <script defer src="/examples/libs/simple-adaptive-slider/simple-adaptive-slider.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // инициализация слайдера
+      var slider = new SimpleAdaptiveSlider('.slider', {
+        autoplay: true,
+        interval: 10000,
+      });
+    });
+  </script>
+  <style>
+  
+	*{
+		text-decoration: none;
+	}
+    /* стили для элемента body */
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+        sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    }
+	
+	
+
+    .slider {
+      max-width: 800px;
+	  padding-top: 100px;
+    }
+
+    /* дополнительные стили для этого примера */
+    .slider__items {
+      counter-reset: slide;
+	  
+    }
+
+    .slider__item {
+      position: relative;
+      counter-increment: slide;
+    }
+
+    .slider__item::after {
+      content: counter(slide);
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #fff;
+      font-style: italic;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .img-fluid {
+      display: inline-block;
+      height: auto;
+      max-width: 100%;
+    }
+	
+	.header{
+		text-align: center;
+		background-color: #1f1f1f;
+		padding: 10px 0;
+	}
+	
+	.qwe{
+		color: white;
+		padding: 10px 30px;
+	}
+	
+	.active{
+		background-color: #3d3d3d;
+	}
+  </style>
+</head>
+
+<body>
+	<div class="header">
+		<a class="qwe active" href="#">Слайдер</a>
+		<a class="qwe" href="E:\donil\page2.html">Видео</a>
+		<a class="qwe" href="E:\donil\page3.html">Таймер</a>
+	</div>
+
+
+
+  <!-- Разметка слайдера -->
+  <div class="slider">
+
+    <div class="slider__wrapper">
+      <div class="slider__items">
+        <div class="slider__item">
+          <img class="img-fluid" src="https://img4.goodfon.com/original/1920x1080/c/32/agata-serge-foto-devushka-vesnushki-portret.jpg" alt="..." width="800" height="400" loading="lazy">
+        </div>
+        <div class="slider__item">
+          <img class="img-fluid" src="https://s.poembook.ru/theme/63/00/14/e98ebe4a58e8b3e79449f62c0e88448de1cc931d.jpeg" alt="..." width="800" height="400" loading="lazy">
+        </div>
+        <div class="slider__item">
+          <img class="img-fluid" src="https://img1.goodfon.ru/original/1920x1080/8/b0/shadow-music-devushka-skripka.jpg" alt="..." width="800" height="400" loading="lazy">
+        </div>
+        <div class="slider__item">
+          <img class="img-fluid" src="https://forum.honda-club.ru/proxy.php?image=http%3A%2F%2Ffc06.deviantart.net%2Ffs71%2Ff%2F2012%2F333%2Fb%2F4%2Fsexy_smoking_by_antopianetwork-d5mj0tj.jpg&hash=5c7ff3bd7cfcbbbe2237168f21be76ef" alt="..." width="800" height="400" loading="lazy">
+        </div>
+		<div class="slider__item">
+          <img class="img-fluid" src="https://airwallpaper.com/wp-content/uploads/wall001/Free-download-Nirvana-Image.jpg" alt="..." width="800" height="400" loading="lazy">
+        </div>
+				<div class="slider__item">
+          <img class="img-fluid" src="https://pbs.twimg.com/media/Dqpppc8X0AE_1ZP.jpg:large" alt="..." width="800" height="400" loading="lazy">
+        </div>
+				<div class="slider__item">
+          <img class="img-fluid" src="https://www.culture.ru/storage/images/ca86964bcfbfccd16a4f1b47b4964dd6/c20a7984d4cfa4a4f1f049f7b6416f85.jpg/g_center,c_fill/nikulin.jpg" alt="..." width="800" height="400" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+    <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+  </div>
+</body>
+
+</html>
+
+						

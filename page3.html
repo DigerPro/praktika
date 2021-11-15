@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+	  <link rel="stylesheet" type="text/css" href="style.css" />
+    	<link rel="stylesheet" href="css/styles_6aa74a7d572c9ec3e83a3f88c2be5a0f.css" />
+		
+		  <style>
+  *{
+		text-decoration: none;
+	}
+    /* стили для элемента body */
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+        sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    }
+	
+  	.header{
+		text-align: center;
+		background-color: #1f1f1f;
+		padding: 10px 0;
+	}
+	
+	.qwe{
+		color: white;
+		padding: 10px 30px;
+	}
+	
+	.active{
+		background-color: #3d3d3d;
+	}
+  </style>
+ </head>
+ <body>
+	<div class="header">
+		<a class="qwe" href="index1.html">Слайдер</a>
+		<a class="qwe" href="page2.html">Видео</a>
+		<a class="qwe active" href="page3.html">Таймер</a>
+	</div>
+		  <div class="content-main">
+                <h1 id="setTitleH1">Таймер онлайн со звуком</h1>
+                <input id="setTitle" type="text" value="Таймер онлайн со звуком" autocomplete="none"/>
+                <div class="button" id="title-edit-btn">
+                    <a class="save" href="javascript:saveEditTitle();">Сохранить</a>
+                    <a class="cancel" href="javascript:closeEditTitle();">Отменить</a>
+                </div>
+                <div class="timer-sets" id="timer-sets">
+                    <a href="javascript:timerSet(1,false)">+1м</a>
+                    <a href="javascript:timerSet(5,false)">+5м</a>
+                    <a href="javascript:timerSet(10,false)">+10м</a>
+                    <a href="javascript:timerSet(15,false)">+15м</a>
+                    <a href="javascript:timerSet(30,false)">+30м</a>
+                    <a href="javascript:timerSet(60,false)">+1ч</a>
+                    <a class="add" href="javascript:timerShowAdd()">+</a>
+                    <a class="settings" href="javascript:stopHotKeySettings();showModal('modal-settings');"><img src="/img/u39.png" /></a>
+                </div>
+                <div id="timerAddBlock">
+                    <input id="timerAddHour" name="timerAddHour" type="number" max="24" min="0" value="0" required><label>Ч</label>
+                    <input id="timerAddMinute" name="timerAddMinute" type="number" max="60" min="0" value="10" required><label>М</label>
+                    <input id="timerAddSecond" name="timerAddSecond" type="number" max="60" min="0" value="0" required><label>С</label>
+                    <input id="timerAddName" name="timerAddName" type="text" maxlength="10" placeholder="описание" required><label></label>
+                    <a class="addButton" href="javascript:timerSetAdd($('#timerAddHour').val(),$('#timerAddMinute').val(),$('#timerAddSecond').val(),$('#timerAddName').val())">Добавить</a>
+                </div>
+                <div class="timer-container">
+                    <span class="timer" id="timer"><span data-max="101">00</span>:<span data-max="24">00</span>:<span data-max="60">00</span>.00</span>
+                    <div class="timer-edit" id="timer-edit">
+                        <input id="setHour" type="number" value="0" min="0" max="99" autocomplete="none"/><span>:</span>
+                        <input id="setMinute" type="number" value="0" min="0" max="59" autocomplete="none"/><span>:</span>
+                        <input id="setSecond" type="number" value="0" min="0" max="59" autocomplete="none"/><span>.00</span>
+                    </div>
+                    <div class="button" id="timer-edit-btn">
+                        <a class="save" href="javascript:saveEditTime();">Сохранить</a>
+                        <a class="cancel" href="javascript:closeEditTime();">Отменить</a>
+                    </div>
+                </div>
+                <div class="timer-sets">
+                    <a href="javascript:timerSet(1,1)">1 минута</a>
+                    <a href="javascript:timerSet(2,1)">2 минуты</a>
+                    <a href="javascript:timerSet(5,1)">5 минут</a>
+                    <a href="javascript:timerSet(10,1)">10 минут</a>
+                    <a href="javascript:timerSet(15,1)">15 минут</a>
+                    <a href="javascript:timerSet(30,1)">30 минут</a>
+                    <a href="javascript:timerSet(60,1)">60 минут</a>
+                    <a href="javascript:timerSet(120,1)">120 минут</a>
+                </div>
+                <div class="button-block">
+                    <div class="button"><a class="start" id="start" href="javascript:start();"></a></div>
+                    <div class="button"><a class="stop disabled" id="stop" href="javascript:kill();"></a></div>
+                    <div class="button"><a class="refresh" id="refresh" href="javascript:refresh();"></a></div>
+                    <a class="sound max" href="javascript:soundSwitch()"></a>
+                </div>
+                <div class="hotkeys">
+                    <strong>ПРОБЕЛ</strong> - старт/стоп,
+                    <strong>ESC</strong> - обнулить
+                </div>
+            </div>
+            <div class="citem2"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8091271152268111"
+     data-ad-slot="2904995591"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+        </div>
+
+        <div class="citem_mobile1"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- timer_mobile1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8091271152268111"
+     data-ad-slot="7582607207"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+
+	<script src="scripts_471d27dcadc9d16a58c2308ba912ddc2.js"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(28251366, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+</script>
+ </body>
+</html>
